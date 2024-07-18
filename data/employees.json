@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "age": 30,
+    "department": "Sales",
+    "email": "john.doe@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 25,
+    "department": "Marketing",
+    "email": "jane.smith@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Emily Johnson",
+    "age": 28,
+    "department": "HR",
+    "email": "emily.johnson@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Michael Brown",
+    "age": 35,
+    "department": "Finance",
+    "email": "michael.brown@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Sarah Davis",
+    "age": 32,
+    "department": "IT",
+    "email": "sarah.davis@example.com"
+  },
+  {
+    "id": 6,
+    "name": "David Wilson",
+    "age": 29,
+    "department": "Sales",
+    "email": "david.wilson@example.com"
+  },
+  {
+    "id": 7,
+    "name": "Laura Moore",
+    "age": 27,
+    "department": "Marketing",
+    "email": "laura.moore@example.com"
+  },
+  {
+    "id": 8,
+    "name": "James Taylor",
+    "age": 31,
+    "department": "HR",
+    "email": "james.taylor@example.com"
+  },
+  {
+    "id": 9,
+    "name": "Olivia Anderson",
+    "age": 24,
+    "department": "Finance",
+    "email": "olivia.anderson@example.com"
+  },
+  {
+    "id": 10,
+    "name": "Daniel Thomas",
+    "age": 26,
+    "department": "IT",
+    "email": "daniel.thomas@example.com"
+  },
+  {
+    "id": 11,
+    "name": "Sophia Martinez",
+    "age": 33,
+    "department": "Sales",
+    "email": "sophia.martinez@example.com"
+  },
+  {
+    "id": 12,
+    "name": "Matthew Harris",
+    "age": 34,
+    "department": "Marketing",
+    "email": "matthew.harris@example.com"
+  },
+  {
+    "id": 13,
+    "name": "Isabella Clark",
+    "age": 22,
+    "department": "HR",
+    "email": "isabella.clark@example.com"
+  },
+  {
+    "id": 14,
+    "name": "Joseph Lewis",
+    "age": 36,
+    "department": "Finance",
+    "email": "joseph.lewis@example.com"
+  },
+  {
+    "id": 15,
+    "name": "Mia Robinson",
+    "age": 29,
+    "department": "IT",
+    "email": "mia.robinson@example.com"
+  },
+  {
+    "id": 16,
+    "name": "Christopher Walker",
+    "age": 28,
+    "department": "Sales",
+    "email": "christopher.walker@example.com"
+  },
+  {
+    "id": 17,
+    "name": "Abigail Hall",
+    "age": 30,
+    "department": "Marketing",
+    "email": "abigail.hall@example.com"
+  },
+  {
+    "id": 18,
+    "name": "Andrew Allen",
+    "age": 27,
+    "department": "HR",
+    "email": "andrew.allen@example.com"
+  },
+  {
+    "id": 19,
+    "name": "Elizabeth Young",
+    "age": "55",
+    "department": "School",
+    "email": "rohitbheta123@gmail.com"
+  },
+  {
+    "id": 20,
+    "name": "Joshua King",
+    "age": 31,
+    "department": "IT",
+    "email": "joshua.king@example.com"
+  },
+  {
+    "name": "Rohit Bhetal",
+    "id": 21,
+    "age": "12",
+    "department": "School",
+    "email": "rohitbhetal123@gmail.com"
+  }
+]

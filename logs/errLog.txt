@@ -1,0 +1,27 @@
+20240704	21:24:19	f125d976-3707-43fa-9bfc-408eab929c1a	Error:Not allowed by cors
+20240704	21:24:57	34ca7d30-7619-47f7-9317-3bf775580307	Error:Not allowed by cors
+20240710	13:05:34	b6028326-4b93-4d95-a3a9-01796094c877	SyntaxError:Unexpected token 'o', "[object Obj"... is not valid JSON
+20240710	13:14:38	3619c84e-ce28-4890-8867-958c9da8814b	TypeError:Cannot read properties of undefined (reading 'status')
+20240710	13:15:47	9be34cb6-dd38-4b57-a85b-8669dccd30b2	TypeError:Cannot read properties of undefined (reading 'status')
+20240710	13:16:47	754556b9-ba07-4a64-930e-24236b628727	TypeError:Cannot read properties of undefined (reading 'status')
+20240710	13:36:48	9e00eaab-116a-4e02-89be-6f141e2c3d9b	TypeError:Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+20240710	13:37:46	2a915385-8a10-4038-a212-152d9d397b82	TypeError:Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+20240710	13:38:57	b31140c8-a76f-47fd-825a-37100cc398e0	SyntaxError:"[object Object]" is not valid JSON
+20240711	09:11:00	d72dc719-4d80-4d96-81ef-bbfca61c673e	ReferenceError:users is not defined
+20240711	09:11:14	1ca00552-35b2-47a9-8111-28b07c6e02a0	ReferenceError:users is not defined
+20240711	09:11:32	bf80bd34-e41d-40c4-a774-8d910045e5ce	ReferenceError:users is not defined
+20240711	09:11:33	88dab551-08af-4801-b9ba-8665b1e0a03c	ReferenceError:users is not defined
+20240711	09:11:34	9ac62ff2-8c74-414d-98e6-f2776bcccd29	ReferenceError:users is not defined
+20240711	09:12:35	c4e2f57e-c512-41e0-925f-407d7334397b	TypeError:Cannot set properties of undefined (setting 'name')
+20240711	09:13:53	a6a5ce14-4e13-47f4-8949-b04c7e2c2721	TypeError:Cannot set properties of undefined (setting 'name')
+20240711	09:15:01	c35bf75a-d53f-43c8-8a7d-e38acf26c0c9	TypeError:Cannot set properties of undefined (setting 'age')
+20240711	09:17:16	cd12a1de-9d8f-4d10-9278-5c4f5f764ef3	TypeError:Cannot set properties of undefined (setting 'age')
+20240711	09:17:35	369eca28-8462-4817-b363-fae72b775e4c	TypeError:Cannot set properties of undefined (setting 'age')
+20240711	09:18:09	9a2f0abf-aa5a-48fe-a18b-c60a92177f6d	ReferenceError:userIndex is not defined
+20240711	15:39:33	32742995-43ca-4ea4-8881-f8b6eba6c9a1	ReferenceError:usersData is not defined
