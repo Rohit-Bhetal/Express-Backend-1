@@ -9,12 +9,13 @@ const cors=require('cors');
 const corsOptions=require('./config/corsOptions')
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require("cookie-parser");
+const credentials = require("./middleware/credential");
 //Custom Middlewares
 
 app.use(logger);
 
 //Cross -Origin Resources Sharing
-
+app.use(credentials)
 app.use(cors(corsOptions));
 
 
@@ -40,8 +41,9 @@ app.use('/subdir',express.static(path.join(__dirname,'/public')));
 app.use('/subdir',require('./routes/subdir'));
 app.use('/',require('./routes/root'));
 app.use('/register',require('./routes/register'));
-app.use('/login',require('./routes/auth'));
+app.use('/login',require('./routes/auth')); // Use Credential Flags 
 app.use('/refresh',require('./routes/refresh'));
+app.use('/logout',require('./routes/logout'));
 
 app.use(verifyJWT);
 app.use('/employees',require('./routes/api/employees'));

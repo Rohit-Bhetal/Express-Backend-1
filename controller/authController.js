@@ -44,7 +44,7 @@ const handleLogin = async (req,res)=>{
 
         userDB.setUsers([...otherUsers,currentUser]);
         await fsPromises.writeFile(path.join(__dirname,'..','model','user.json'),JSON.stringify(userDB.users,null,2))
-        res.cookie('jwt',refreshToken,{httpOnly: true, maxAge : 24*60*6*1000});
+        res.cookie('jwt',refreshToken,{httpOnly: true,sameSite:'None',secure:true, maxAge : 24*60*6*1000});
         res.json({ accessToken });
     }else{
         res.sendStatus(401);
