@@ -278,3 +278,10 @@
 20240719	06:55:35	444de286-9ffc-4f68-8a1f-684421d3e9ec	GET	undefined	/logout
 20240719	14:16:42	116bc9d5-e7bd-4966-b400-6462fda0e2cc	POST	undefined	/login
 20240719	14:16:44	4cd4322a-2e37-4416-95fb-6a8de919724a	GET	undefined	/logout
+20240719	15:40:00	8ec61f9d-45d4-4c52-990d-f687d338c96f	POST	undefined	/login
+20240719	15:40:53	9492dbb1-9dfc-4256-95b0-e14320029c84	POST	undefined	/register
+20240719	15:40:59	3f9e623e-1164-4245-937b-87211b8c3548	POST	undefined	/register
+20240719	15:41:05	4a221979-6629-47ff-b7b6-0d6d46af3c5c	POST	undefined	/register
+20240719	15:41:36	7d82fd93-1641-49ed-89ef-765eac39a01f	POST	undefined	/login
+20240719	15:41:41	9f5feb51-09f7-4ac3-b391-2c7537145907	POST	undefined	/login
+20240719	15:41:45	2af82379-e83c-45f6-a829-1d56aeb4afd3	POST	undefined	/login
