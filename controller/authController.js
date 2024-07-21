@@ -22,10 +22,11 @@ const handleLogin = async (req,res)=>{
     //evaluate password
     const match =await bcyrpt.compare(pwd,foundUser.password);
     if(match){
+        const roles= Object.values(foundUser.roles);
         //create JWT 
         const accessToken = jwt.sign(
             {"username": foundUser.username,
-                "roles":"roles"
+                "roles":roles
             },
             process.env.ACCESS_TOKEN_SECRET,
             {
