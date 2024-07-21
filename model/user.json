@@ -1,37 +1,37 @@
 [
   {
     "username": "rohit",
-    "roles":{
+    "roles": {
       "Admin": 5150,
       "Editor": 1984,
       "User": 2001
-  },
+    },
     "password": "$2b$10$ZOl88Hxz4QEYlW.Ud6PD4.dS7wszyRrwLJKMw1B3XMXnhEBPB96k6",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvaGl0IiwiaWF0IjoxNzIxMzc3OTAyLCJleHAiOjE3MjE0NjQzMDJ9.lbdwMGfvMraQoK5tVjcmCLEPItfejUop2G9BOYhrJYI"
   },
   {
-    "username": "naruto",
-    "roles":{
-      "Admin": 5150
-  },
-    "password": "$2b$10$xMX5pFB3N8/A3A0b.8SUq.2U924OUc.8vahpRh9vd.Ujjhhai2b2i",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcnV0byIsImlhdCI6MTcyMTM4Mjk5NiwiZXhwIjoxNzIxNDY5Mzk2fQ.44XcG80ae3NE6dMg_Mafg4mOZZ8xhsFOCSMeHoRg0sc"
-  },
-  {
     "username": "luffy",
-    "roles":{
+    "roles": {
       "Admin": 5150,
       "Editor": 1984
-  },
+    },
     "password": "$2b$10$QAGtzLQbMQ2pqUgiJRoAj.RV2eBffovJapscT6Q7KcdSrUykDSvOe",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1ZmZ5IiwiaWF0IjoxNzIxMzgzMDAxLCJleHAiOjE3MjE0Njk0MDF9.j8hE4ZgqE5psjqD9EdXJXcAUKNLhOPHyBricdnfXYG0"
   },
   {
     "username": "ashim",
-    "roles":{
+    "roles": {
       "User": 2001
-  },
+    },
     "password": "$2b$10$NiqrG8su0cYww3WeFSt3yuRDefxdBiLNIDUmHl256RgpqLOVYX76y",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzaGltIiwiaWF0IjoxNzIxMzgzMDA1LCJleHAiOjE3MjE0Njk0MDV9.saAJ4PTPiapLBjQDzIHfSn9jOjGUZdtrHio3IMtxvAA"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzaGltIiwiaWF0IjoxNzIxNDU4NzIyLCJleHAiOjE3MjE1NDUxMjJ9.7pLdI9TGWFyNb8yEotAvfKuqBDEw39IaE3lwgq_sQ3k"
+  },
+  {
+    "username": "naruto",
+    "roles": {
+      "Admin": 5150
+    },
+    "password": "$2b$10$xMX5pFB3N8/A3A0b.8SUq.2U924OUc.8vahpRh9vd.Ujjhhai2b2i",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcnV0byIsImlhdCI6MTcyMTQ1OTAxOSwiZXhwIjoxNzIxNTQ1NDE5fQ.pCuGcHtNZ6J-bG6UTLwc_8hWQOFldbSTF5q5n2Vg1ok"
   }
 ]

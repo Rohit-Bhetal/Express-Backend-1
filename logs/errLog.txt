@@ -25,3 +25,10 @@
 20240711	09:17:35	369eca28-8462-4817-b363-fae72b775e4c	TypeError:Cannot set properties of undefined (setting 'age')
 20240711	09:18:09	9a2f0abf-aa5a-48fe-a18b-c60a92177f6d	ReferenceError:userIndex is not defined
 20240711	15:39:33	32742995-43ca-4ea4-8881-f8b6eba6c9a1	ReferenceError:usersData is not defined
+20240720	10:14:28	fe95d255-0db8-468e-aa46-f51b93dff3aa	TypeError:authHeader?.starsWith is not a function
+20240720	10:28:22	4f007f97-abbb-41a7-af7a-3ae8e8c00573	TypeError:Cannot read properties of undefined (reading 'split')
+20240720	10:29:23	44c0ddf9-a579-4db3-9fe0-164b81562038	TypeError:Cannot read properties of undefined (reading 'username')
+20240720	10:29:26	b84432a1-f8e8-4afe-bc5b-9e64fe7599fb	TypeError:Cannot read properties of undefined (reading 'username')
+20240720	10:30:26	bee67fdd-8acc-43b6-b9a4-0e555413be00	TypeError:req.roles.map is not a function
+20240720	12:45:17	1a207dd4-6034-467a-9aba-d856ff8836d2	TypeError:req.roles.map is not a function
+20240720	12:48:52	942ab6cd-423f-42d3-98f1-52d1e4845d0c	TypeError:req.roles.some is not a function
