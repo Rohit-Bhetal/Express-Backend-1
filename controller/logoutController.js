@@ -1,11 +1,5 @@
-const userDB = {
-    users: require('../model/user.json'),
-    setUsers :function(newUser){this.users=newUser}
-}
+const User = require('../model/User');
 
-
-const fsPromises= require('fs').promises;
-const path = require('path');
 
 
 const logoutHandler = async(req,res)=>{
@@ -16,20 +10,17 @@ const logoutHandler = async(req,res)=>{
     if(!cookies?.jwt) return res.sendStatus(204); //No Content
     const refreshToken = cookies.jwt;
     //Is refreshToken in db?
-    const foundUser=userDB.users.find(person=>person.refreshToken===refreshToken);
+    const foundUser=User.findOne({
+        refreshToken
+    }).exec();
     if(!foundUser){
         res.clearCookie('jwt',{httpOnly:true,sameSite:'None',secure:true})
         return res.status(204);
     }
   
     //Delete refreshToken in db
-    const otherUsers = userDB.users.filter(person=>person.refreshToken !== foundUser.refreshToken)
-    const currentUser = {...foundUser,refreshToken:''};
-    userDB.setUsers([...otherUsers,currentUser]);
-    await fsPromises.writeFile(
-        path.join(__dirname,'..','model','user.json'),
-        JSON.stringify(userDB.users,null,2)
-    );
+    foundUser.refreshToken='';
+    //await foundUser.save();
 
     res.clearCookie('jwt',{httpOnly:true,sameSite:'None',secure:true}) //secure :true -only servers on https use in production
 
