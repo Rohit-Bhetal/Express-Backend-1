@@ -3,7 +3,6 @@ require('dotenv').config();
 
 const verifyJWT = (req,res,next)=>{
     const authHeader = req.headers['authorization'];
-
     const token = authHeader.split(' ')[1];
     jwt.verify(
         token,
@@ -15,7 +14,7 @@ const verifyJWT = (req,res,next)=>{
             next();
 
         }
-    )
+    );
 }
 
 module.exports = verifyJWT

@@ -33,3 +33,4 @@
 20240720	12:45:17	1a207dd4-6034-467a-9aba-d856ff8836d2	TypeError:req.roles.map is not a function
 20240720	12:48:52	942ab6cd-423f-42d3-98f1-52d1e4845d0c	TypeError:req.roles.some is not a function
 20240721	08:22:17	155bb1ce-7bb4-43e0-948c-28f8ab466086	TypeError:req.roles.map is not a function
+20240721	17:30:06	c799f170-480d-4846-a958-e1d78e7a91e1	TypeError:Cannot read properties of undefined (reading 'split')

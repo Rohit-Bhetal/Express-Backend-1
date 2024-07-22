@@ -10,6 +10,12 @@ const corsOptions=require('./config/corsOptions')
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require("cookie-parser");
 const credentials = require("./middleware/credential");
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbConn');
+
+
+//connect to mongoDB
+connectDB();
 //Custom Middlewares
 
 app.use(logger);
@@ -112,6 +118,12 @@ app.use((err, req, res, next) => {
     }
 });
 
-app.listen(PORT,'127.0.0.1',()=>{
-    console.log(`Listening to port:${PORT}`)
-})
+mongoose.connection.once('open',()=>{
+    console.log('Connected to MongoDB');
+    app.listen(PORT,'127.0.0.1',()=>{
+        console.log(`Listening to port:${PORT}`);
+    });
+    
+});
+
+
