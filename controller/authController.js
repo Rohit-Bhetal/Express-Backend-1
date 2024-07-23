@@ -11,9 +11,9 @@ const handleLogin = async (req,res)=>{
     if(!user || !pwd) return res.status(400).json({
         'message':"Username and password are required."
     });
-    const foundUser=User.findOne({
+    const foundUser=await User.findOne({
         username:user
-    }).exec;
+    }).exec();
     if(!foundUser) return res.status(404).json({
         'error':'Username not found'
     });
@@ -41,7 +41,8 @@ const handleLogin = async (req,res)=>{
 
         );
         foundUser.refreshToken = refreshToken;
-        //await foundUser.save();
+        const result=await foundUser.save();
+        console.log(result);
         res.cookie('jwt',refreshToken,{httpOnly: true,sameSite:'None',secure:true, maxAge : 24*60*6*1000});
         res.json({ accessToken });
     }else{

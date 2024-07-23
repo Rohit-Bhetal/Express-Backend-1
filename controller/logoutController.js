@@ -1,5 +1,5 @@
 const User = require('../model/User');
-
+require('dotenv').config;
 
 
 const logoutHandler = async(req,res)=>{
@@ -20,7 +20,8 @@ const logoutHandler = async(req,res)=>{
   
     //Delete refreshToken in db
     foundUser.refreshToken='';
-    //await foundUser.save();
+    const result=await foundUser.save();
+    console.log(result);
 
     res.clearCookie('jwt',{httpOnly:true,sameSite:'None',secure:true}) //secure :true -only servers on https use in production
 

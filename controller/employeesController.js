@@ -1,22 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config;
+const Employee = require('../model/Employee')
 
-const data = {};
-data.employees=require('../data/employees.json');
-const getAllEmployees =(req,res)=>{
-    res.json(data.employees);
+
+const getAllEmployees = async(req,res)=>{
+    const employees = await Employee.find().exec();
+    if(!employees) return res.status(204).json({
+        'message': 'No employees'
+    })
+
 } 
 
 
-const addNewEmployeeToJson=(newEmployee)=>{
-   
-        let users = data.employees;
-        users.push(newEmployee);
-        usersjson=JSON.stringify(users, null, 2);
-        fs.writeFileSync(path.join(__dirname,'../data/employees.json'),usersjson,"utf-8");
-    
-}
-const createNewEmployee=(req,res)=>{
+
+const createNewEmployee= async(req,res) => {
     const {name,age,department,email}= req.body;
 
     if(!name || !age || !department || !email){
@@ -24,68 +22,71 @@ const createNewEmployee=(req,res)=>{
             error:"Missing fields"
         })
     }
-    let id=data.employees.length > 0 ? data.employees[data.employees.length - 1].id + 1 : 1;
-    let newEmployee ={name,id,age,department,email};
-    addNewEmployeeToJson(newEmployee);
-    res.json(newEmployee);
+    try {
+        const result = await Employee.create({
+            name: name,
+            age:age,
+            department:department,
+            email:email
+        });
+        res.status(200).json(result)
+    } catch (error) {
+        console.error(error);
+    }
+    
 }
 
-const updateEmployee=(req,res)=>{
+const updateEmployee= async (req,res)=>{
     const id = req.body.id;
     if(!id){
         return res.status(400).json({
             error:"Missing id"
         })
     }
-    let usersdata=data.employees;
+    const employee = await Employee.findOne({
+        _id:req.body.id
+    }).exec();
+    if (req.body.name) employee.name=req.body.name;
+    if (req.body.age) employee.age=req.body.age;
+    if (req.body.email) employee.email=req.body.email;
+    if (req.body.department) employee.department=req.body.department;
+
+    const result = await employee.save();
+    result.json(result);
     
-    let usersIndex= usersdata.findIndex(user=>user.id===id);
-    if (usersIndex === -1) {
-        return res.status(404).json({
-            error: "Id not found"
-        });
-    }else{
-        if (req.body.name) usersdata[usersIndex].name=req.body.name;
-        if (req.body.age) usersdata[usersIndex].age=req.body.age;
-        if (req.body.email) usersdata[usersIndex].email=req.body.email;
-        if (req.body.department) usersdata[usersIndex].department=req.body.department;
-        fs.writeFileSync(path.join(__dirname,'../data/employees.json'),JSON.stringify(usersdata, null, 2),"utf-8");
-        res.status(200).json({
-            "message": "Employee data updated successfully",
-            "employee": usersdata[usersIndex]
-        })
-    }
     
     
 }
 
-const deleteEmployee=(req,res)=>{
+const deleteEmployee= async(req,res)=>{
     const id = req.body.id;
     if(!id){
         return res.status(400).json({
             error:"Missing id"
         })
     }
-    let usersdata=data.employees;
+    const employee = await Employee.findOne({
+        _id:req.body.id
+    }).exec();
     
-    let newUsers= usersdata.filter(user=>user.id!==id);
-    if (newUsers === null) {
-        return res.status(404).json({
-            error: "Id not found"
-        });
-    }else{
-        fs.writeFileSync(path.join(__dirname,'../data/employees.json'),JSON.stringify(newUsers, null, 2),"utf-8");
-        res.status(200).json({
-            "message": "Employee data updated successfully"
-        })
-    }
+    const result = await employee.deleteOne({
+        _id:req.body.id
+    });
+
+    res.json(result);
+
     
 }
 
-const getEmployee = (req,res)=>{
-    res.json({
-        "id":req.params.id
-    })
+const getEmployee = async (req,res)=>{
+    if(!req.params?.id) return res.status(400).json({
+        'message':"Employee ID Required"
+    });
+    const employee = await Employee.findOne({
+        _id:req.body.id
+    }).exec();
+
+    res.json(employee);
 }
 
 module.exports={
